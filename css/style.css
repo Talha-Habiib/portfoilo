@@ -272,3 +272,9 @@ body {
 .btn-danger:focus {
     box-shadow: unset !important;
 }
+
+@media (max-width: 662px) {
+    .splide__arrow--next {
+        display: none !important;
+    }
+}
