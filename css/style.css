@@ -272,3 +272,19 @@ body {
 .btn-danger:focus {
     box-shadow: unset !important;
 }
+
+.ul-education {
+    margin-top: 81px;
+}
+
+@media (max-width: 728px) {
+    .splide__arrow--next {
+        display: none !important;
+    }
+}
+
+@media (max-width: 420px) {
+    .btn-danger {
+        margin-top: 3px !important;
+    }
+}
