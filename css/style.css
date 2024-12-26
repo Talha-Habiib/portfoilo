@@ -288,3 +288,16 @@ body {
         margin-top: 3px !important;
     }
 }
+
+#skill_splide .splide__pagination {
+    display: none !important;
+}
+
+#skill_splide .splide__arrow {
+    display: none !important;
+}
+
+#skill_splide .splide__arrow {
+    height: unset !important;
+    width: unset !important;
+}

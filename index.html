@@ -41,6 +41,9 @@
                                 <a class="nav-link" href="#portfolio">Portfolio</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="#skills">Skills</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" target="_blank"
                                     href="https://wa.me/+923187341088?text=Hello%20Talha,%20I%20need%20a%20professional%20software%20engineer%20for%20my%20project.%20Let's%20connect!">Contact</a>
                             </li>
@@ -258,6 +261,10 @@
                 </div>
             </div>
         </div>
+        <br>
+
+
+
 
         <div class="container custom-container" id="portfolio">
             <div class="row mt-4">
@@ -384,6 +391,52 @@
             <br>
             <br>
         </div>
+        <div class="" id="skills    ">
+            <div class="container mt-5 mb-5">
+                <div class="splide" id="skill_splide">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <img src="images/skills/php.png" width="100px" alt="">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="images/skills/laravel.png" width="100px" alt="">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="images/skills/mysql.png" width="150px" alt="">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="images/skills/html.png" width="100px" alt="">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="images/skills/css.png" width="65px" alt="">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="images/skills/js.png" width="100px" alt="">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="images/skills/jquery.png" width="100px" alt="">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="images/skills/tailwind.png" width="100px" alt="">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="images/skills/bootstrap.png" width="80px" alt="">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="images/skills/github.png" width="80px" alt="">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="images/skills/vue.png" width="80px" alt="">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="images/skills/docker.png" width="80px" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <footer class="footer">
         <div class="container-fluid">
@@ -477,7 +530,9 @@
             document.querySelector('a[download]').addEventListener('click', function () {
                 console.log('CV download triggered.');
             });
-            const splide = new Splide('.splide', {
+
+
+            const splide = new Splide('#custom-card-carousel', {
                 type: 'loop',
                 drag: 'free',
                 focus: 'center',
@@ -488,19 +543,44 @@
                 },
                 breakpoints: {
                     1200: {
-                        perPage: 2, // Show 2 items on screens smaller than 1200px
+                        perPage: 2,
                     },
                     768: {
-                        perPage: 1, // Show 1 item on screens smaller than 768px
+                        perPage: 1,
                     },
                     480: {
-                        perPage: 1, // Keep 1 item on very small screens (for example mobile)
-                        gap: '10px', // Optional: reduce the gap between items for smaller screens
+                        perPage: 1,
+                        gap: '10px',
                     },
                 },
             });
 
             splide.mount();
+
+            const skillSlider = new Splide('#skill_splide', {
+                type: 'loop',
+                drag: 'free',
+                focus: 'center',
+                perPage: 5,
+                autoplay: true,
+                autoScroll: {
+                    speed: 10,
+                },
+                breakpoints: {
+                    1200: {
+                        perPage: 2,
+                    },
+                    768: {
+                        perPage: 3,
+                    },
+                    480: {
+                        perPage: 3,
+                        gap: '10px',
+                    },
+                },
+            });
+
+            skillSlider.mount();
         });
     </script>
 </body>
